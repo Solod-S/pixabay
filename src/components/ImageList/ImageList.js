@@ -1,10 +1,11 @@
 import * as React from 'react';
+
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import ImageItem from 'components/ImageItem/ImageItem';
 
 export default function MasonryImageList({ images }) {
-  console.log(images);
   return (
     <Box
       sx={{
@@ -16,12 +17,14 @@ export default function MasonryImageList({ images }) {
       <ImageList variant="masonry" cols={3} gap={8}>
         {images.map(item => (
           <ImageListItem key={item.largeImageURL}>
-            <img
+            <ImageItem item={item} />
+            {/* <img
               src={`${item.largeImageURL}?w=248&fit=crop&auto=format`}
               srcSet={`${item.largeImageURL}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.tags}
               loading="lazy"
-            />
+              onClick={() => openModal()}
+            /> */}
           </ImageListItem>
         ))}
       </ImageList>
