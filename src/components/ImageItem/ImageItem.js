@@ -21,6 +21,7 @@ const ImageItem = ({ item }) => {
         srcSet={`${item.largeImageURL}?w=248&fit=crop&auto=format&dpr=2 2x`}
         alt={item.tags}
         loading="lazy"
+        className="MuiImageListItem-img"
         onClick={() => openModal()}
       />
       <ImageModal data={item} isOpen={isOpen} onClose={closeModal} />

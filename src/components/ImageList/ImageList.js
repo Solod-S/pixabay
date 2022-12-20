@@ -23,7 +23,7 @@ export default function MasonryImageList({ images }) {
               srcSet={`${item.largeImageURL}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.tags}
               loading="lazy"
-              onClick={() => openModal()}
+              // onClick={() => openModal()}
             /> */}
           </ImageListItem>
         ))}
